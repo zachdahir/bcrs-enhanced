@@ -1,0 +1,19 @@
+
+    <mat-card class="mat-elevation-z8">
+     <mat-card-title>
+       Verify Your Username
+     </mat-card-title>
+      <br><br>
+      <form [formGroup]="form" (ngSubmit)="validateUserName()" #validateUserNameForm>
+        <mat-card-content fxLayout="column">
+          <mat-form-field fxFlex>
+            <input matInput type="userName" [formControl]="form.controls['userName']" placeholder="Username:">
+          </mat-form-field>
+          <br><br>
+          <div fxLayoutAlign="end">
+            <button mat-raised-button color="primary" style='margin-right: 10px;' routerLink="/">Back to home</button>
+            <button mat-raised-button color="accent" [disabled]="!form.valid">Submit</button>
+          </div>
+        </mat-card-content>
+      </form>
+    </mat-card>

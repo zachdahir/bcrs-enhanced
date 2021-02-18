@@ -1,0 +1,77 @@
+<!--
+ * Title: sign-in.component.html
+ * Author: Professor Krasso
+ * Date: 23 September 2020
+ * Modified By: Diandra McKenzie
+ * Description: Sign-in component html file
+-->
+
+<div fxLayout="column">
+<div class="bar">
+
+  <div *ngIf="error" class ="text-warning">
+    {{ error }}
+  </div>
+
+</div>
+
+
+
+    <div fxFlex>
+      <mat-card class="mat-elevation-z8 sign-in-container">
+
+
+
+        <mat-card-title>
+          Sign-in
+        </mat-card-title>
+
+        <mat-card-subtitle>
+          You must enter a valid username/password to proceed
+        </mat-card-subtitle>
+
+        <br />
+
+        <mat-card-content>
+
+        <form class="form" [formGroup]="form" (ngSubmit)="signIn(); form.reset();" #loginForm="ngForm">
+          <div>
+            <mat-form-field>
+            <mat-label for="User name">Username:</mat-label>
+              <input
+                    type="text"
+                    matInput
+                    [formControl]="form.controls['userName']"
+                    placeholder="Enter Username"
+                    />
+            </mat-form-field>
+          </div>
+
+
+            <div>
+              <mat-form-field>
+                <mat-label for="password">Password:</mat-label>
+              <input
+                    type="text"
+                    matInput
+                    [formControl]="form.controls['password']"
+                    placeholder="Enter Password"
+                   />
+                  </mat-form-field>
+            </div>
+
+          <mat-card-actions>
+            <button type="submit" (click)='signIn();' mat-raised-button color='accent'>Sign in</button>
+          </mat-card-actions>
+
+            <div class="password"><a routerLink="/session/forgot">Forgot Password</a></div>
+<br />
+<br />
+            <div class="account">
+              <a color='primary' routerLink="/session/register">Create an Account</a>
+            </div>
+        </form>
+      </mat-card-content>
+      </mat-card>
+    </div>
+</div>

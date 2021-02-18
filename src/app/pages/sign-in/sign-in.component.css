@@ -1,0 +1,39 @@
+mat-card {
+  width: 35%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+mat-card-title {
+  text-align: center;
+}
+
+mat-card-content {
+  text-align: center;
+}
+
+mat-card-subtitle {
+  text-align: center;
+  margin: auto;
+}
+
+.password a {
+  color: #C4C4C4;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.account a {
+  color: #80DEEA;
+  font-size: 24px;
+  font-weight: 500;;
+}
+
+mat-form-field {
+  width: 40%;
+}
+
+.text-warning {
+  text-align: center;
+  color: red;
+}
